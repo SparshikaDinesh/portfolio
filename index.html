@@ -1,308 +1,770 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Sparshika Ajmaan | Data & AI Portfolio</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sparshika Ajmaan | Data & AI Portfolio</title>
 
-    <!-- Inter Font -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <!-- Inter Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
 
-    <link rel="stylesheet" href="style.css" />
+  <!-- Your main CSS -->
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- QUICK FIX CSS (safe + professional) -->
+  <style>
+    /* ===== HERO FIX (keeps your design but makes it stable) ===== */
+    .header-card{
+      max-width: 1100px;
+      margin: 120px auto 70px;
+      padding: 46px;
+      border-radius: 22px;
+      position: relative;
+      overflow: hidden;
+
+      display: grid;
+      grid-template-columns: 1fr 240px;
+      gap: 36px;
+      align-items: center;
+
+      background: rgba(0,0,0,0.35);
+      border: 1px solid rgba(255,255,255,0.10);
+      backdrop-filter: blur(14px);
+    }
+
+    /* Chicago image on the hero itself */
+    .header-card.chicago-bg{
+      background-image: url("images/chicago-bg.jpg");
+      background-size: cover;
+      background-position: center;
+    }
+
+    /* Dark overlay for readability */
+    .header-card.chicago-bg::before{
+      content:"";
+      position:absolute;
+      inset:0;
+      background: rgba(0,0,0,0.68);
+      z-index:0;
+    }
+
+    /* Keep everything above overlay */
+    .header-card > *{
+      position: relative;
+      z-index: 1;
+    }
+
+    /* Profile image block */
+    .photo-box{
+      display:flex;
+      justify-content:center;
+      align-items:center;
+    }
+
+    .profile-pic{
+      width: 190px;
+      height: 190px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 4px solid rgba(255,255,255,0.22);
+      box-shadow: 0 10px 30px rgba(0,0,0,0.40);
+    }
+
+    /* Text sizing */
+    .info-box .name{
+      font-size: 36px;
+      line-height: 1.15;
+      margin-bottom: 10px;
+      letter-spacing: -0.2px;
+    }
+
+    .info-box .degree{
+      font-size: 16px;
+      font-weight: 500;
+      color: rgba(255,255,255,0.82);
+      margin-bottom: 14px;
+    }
+
+    .role-line{
+      font-size: 15px;
+      font-weight: 500;
+      color: rgba(255,255,255,0.88);
+      margin: 10px 0 12px;
+    }
+
+    /* typing text should NOT look like a link */
+    #typing-prefix, #typing-text{ color: rgba(255,255,255,0.88); }
+    .cursor{ color: rgba(255,255,255,0.60); }
+
+    .details{
+      font-size: 14px;
+      color: rgba(255,255,255,0.78);
+      margin: 10px 0 14px;
+    }
+
+    .details a{
+      color: rgba(255,255,255,0.88);
+      text-decoration: none;
+      border-bottom: 1px dashed rgba(255,255,255,0.35);
+    }
+
+    .summary-text{
+      font-size: 14.5px;
+      color: rgba(255,255,255,0.82);
+      max-width: 760px;
+      margin-bottom: 18px;
+    }
+
+    /* Buttons: keep clean */
+    .buttons{
+      display:flex;
+      gap:12px;
+      flex-wrap: wrap;
+      margin: 12px 0 14px;
+    }
+
+    .btn{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      padding: 10px 16px;
+      border-radius: 10px;
+      font-size: 14px;
+      font-weight: 600;
+      text-decoration: none;
+      border: 1px solid rgba(255,255,255,0.14);
+      background: rgba(255,255,255,0.08);
+      color: #fff;
+    }
+
+    .btn:hover{
+      background: rgba(255,255,255,0.12);
+    }
+
+    /* Status chips */
+    .status{
+      display:flex;
+      gap:10px;
+      flex-wrap: wrap;
+      margin-top: 6px;
+    }
+    .status-badge{
+      font-size: 12px;
+      padding: 6px 10px;
+      border-radius: 999px;
+      border: 1px solid rgba(255,255,255,0.14);
+      background: rgba(0,0,0,0.25);
+      color: rgba(255,255,255,0.88);
+    }
+    .status-badge.open{
+      background: rgba(45, 108, 255, 0.18);
+      border-color: rgba(45, 108, 255, 0.35);
+    }
+
+    /* Responsive */
+    @media (max-width: 860px){
+      .header-card{
+        grid-template-columns: 1fr;
+        text-align: left;
+      }
+      .photo-box{
+        justify-content:flex-start;
+      }
+    }
+  </style>
 </head>
 
 <body>
 
 <!-- NAVBAR -->
 <header class="navbar">
-    <div class="nav-left">
-        <span class="nav-logo">SA</span>
-        <span class="nav-name">Sparshika Ajmaan</span>
-    </div>
-    <nav class="nav-links">
-        <a href="#home">Home</a>
-        <a href="#about">About</a>
-        <a href="#skills">Skills</a>
-        <a href="#experience">Experience</a>
-        <a href="#projects">Projects</a>
-        <a href="#contact">Contact</a>
-    </nav>
+  <div class="nav-left">
+    <span class="nav-logo">SK</span>
+    <span class="nav-name">Sparshika Kumar</span>
+  </div>
+  <nav class="nav-links">
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#experience">Experience</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+  </nav>
 </header>
 
 <!-- BACKGROUND GLOW -->
 <div class="bg-glow bg-glow-1"></div>
 <div class="bg-glow bg-glow-2"></div>
 
-<!-- HERO SECTION -->
+<!-- HERO SECTION (NEW) -->
 <section id="home" class="header-card reveal chicago-bg">
-    <div class="photo-box">
-        <img src="profile.jpg" class="profile-pic" alt="Sparshika Ajmaan profile" />
+  <div class="info-box">
+    <h1 class="name">Sparshika Ajmaan Dinesh Kumar</h1>
+    <h3 class="degree">Master’s in Data Science • DePaul University</h3>
+
+    <p class="role-line">
+      <span id="typing-prefix">Currently </span>
+      <span id="typing-text"></span><span class="cursor">|</span>
+    </p>
+
+    <p class="details">
+      📍 Chicago, Illinois • ✉ <a href="mailto:adsparshika@gmail.com">adsparshika@gmail.com</a>
+    </p>
+
+    <p class="summary-text">
+       I design and build end-to-end data and machine learning solutions using Python, SQL, AWS, and Apache Spark, with a focus on scalable pipelines, predictive models, and cloud-native analytics that support real decision-making.
+    </p>
+
+
+    <div class="buttons">
+      <a href="https://github.com/SparshikaDinesh" target="_blank" rel="noopener" class="btn">GitHub</a>
+      <a href="https://www.linkedin.com/in/sparshika-ajmaan-dinesh-kumar-67b018215" target="_blank" rel="noopener" class="btn">LinkedIn</a>
+      <a href="resume.pdf" class="btn" download>Download Resume</a>
     </div>
 
-    <div class="info-box">
-        <h1 class="name">Sparshika Ajmaan Dinesh Kumar</h1>
-        <h3 class="degree">Master’s in Data Science • DePaul University</h3>
-
-        <p class="role-line">
-            <span id="typing-prefix">Currently </span>
-            <span id="typing-text"></span><span class="cursor">|</span>
-        </p>
-
-        <p class="details">
-            📍 Chicago, Illinois • ✉ <a href="mailto:sparshikaajmaan707@gmail.com">sparshikaajmaan707@gmail.com</a>
-        </p>
-
-        <p class="summary-text">
-            I build end-to-end data and ML solutions using Python, SQL, AWS, Apache Spark, and modern machine learning.
-            I design scalable pipelines, predictive models, and cloud-native analytics that support real decision-making.
-        </p>
-
-        <div class="buttons">
-            <a href="https://github.com/SparshikaDinesh" target="_blank" class="btn github">GitHub</a>
-            <a href="https://www.linkedin.com/in/sparshika-ajmaan-dinesh-kumar-67b018215" target="_blank" class="btn linkedin">LinkedIn</a>
-            <a href="resume.pdf" download class="btn resume">Download Resume</a>
-        </div>
-
-        <div class="status">
-            <span class="status-badge open">✔ Open to Work</span>
-            <span class="status-badge">Data / ML / Cloud</span>
-            <span class="status-badge">Hybrid / On-Site</span>
-            <span class="status-badge">Relocation Available</span>
-        </div>
+    <div class="status">
+      <span class="status-badge open">✔ Open to Work</span>
+      <span class="status-badge">Data / ML / Cloud</span>
+      <span class="status-badge">Hybrid / On-Site</span>
+    <span class="status-badge mode">US & India Opportunities</span>
     </div>
+  </div>
+
+  <div class="photo-box">
+    <!-- If your file is profile.jpg, change this to profile.jpg -->
+    <img src="profile.jpeg" class="profile-pic" alt="Sparshika profile" />
+  </div>
 </section>
 
+<!-- ABOUT (OLD CONTENT STYLE) -->
 <!-- ABOUT -->
-<section id="about" class="section reveal">
-    <h2>About Me</h2>
-    <p>I am a Data Science graduate from DePaul University with strong focus on <strong>data engineering, cloud computing, and applied machine learning</strong>.</p>
-    <p>I’ve worked with AWS (S3, EMR, Lambda, Glue), PySpark, ETL workflows, supervised ML, LSTM, and SHAP explainability.</p>
-    <p>I am seeking full-time roles as a <strong>Data Engineer, Data Scientist, ML Engineer, Cloud Data Engineer, or Data Analyst</strong>.</p>
+<section id="about" class="section reveal about-old">
+  <h2>About Me</h2>
+
+  <div class="about-box">
+    <p>
+      I enjoy building data systems that make work easier, faster, and more reliable. My background is in data
+      engineering, analytics, and applied machine learning, with hands-on experience designing end-to-end pipelines
+      and automation workflows.
+    </p>
+
+    <p>
+      I completed my MS in Data Science at DePaul University (Nov 2025) and previously worked as an Associate
+      Software Engineer at Accenture on the Dell iDRAC Server Engineering team. There, I automated Python-based
+      BVT and regression workflows, reducing manual testing by 30% and achieving 100% build compliance.
+    </p>
+
+    <p>
+      I've built AWS and Spark-based ETL pipelines using S3, Glue, EMR, and Lambda to process 1M+ records for batch
+      and near real-time analytics. I enjoy working across the full data lifecycle—from ingestion and transformation
+      to modeling and dashboards that support real decision-making.
+    </p>
+
+    <p>
+      My technical experience includes Python, SQL, PySpark, AWS, and deploying machine learning models such as
+      XGBoost, Random Forest, and LSTM through interactive dashboards using Streamlit and Tableau.
+    </p>
+
+    <p class="about-cta">
+      Actively seeking full-time opportunities for 2026 as a Data Engineer, ML Engineer, Cloud Data Engineer, or Data
+      Analyst. OPT-eligible and open to relocation.
+    </p>
+  </div>
 </section>
+
 
 <!-- SKILLS -->
 <section id="skills" class="section reveal">
-    <h2>Skills</h2>
-    <div class="skills-grid">
-        <div class="skill"><strong>Programming</strong><br>Python, SQL, Java, R</div>
-        <div class="skill"><strong>Data Engineering</strong><br>PySpark, ETL Pipelines</div>
-        <div class="skill"><strong>Cloud</strong><br>AWS S3, EMR, Glue, Lambda</div>
-        <div class="skill"><strong>ML Models</strong><br>XGBoost, RF, SVM</div>
-        <div class="skill"><strong>Deep Learning</strong><br>LSTM, NN</div>
-        <div class="skill"><strong>NLP</strong><br>VADER, FinBERT</div>
-        <div class="skill"><strong>BI Tools</strong><br>Tableau, Power BI</div>
-        <div class="skill"><strong>Tools</strong><br>Git, Linux, Airflow basics</div>
-    </div>
+  <h2>Skills</h2>
+  <div class="skills-grid">
+    <div class="skill"><strong>Programming</strong><br>Python, SQL, Java, R</div>
+    <div class="skill"><strong>Data Engineering</strong><br>PySpark, ETL Pipelines</div>
+    <div class="skill"><strong>Cloud</strong><br>AWS S3, EMR, Glue, Lambda</div>
+    <div class="skill"><strong>ML Models</strong><br>XGBoost, RF, SVM</div>
+    <div class="skill"><strong>Deep Learning</strong><br>LSTM, NN</div>
+    <div class="skill"><strong>NLP</strong><br>VADER, FinBERT</div>
+    <div class="skill"><strong>BI Tools</strong><br>Tableau, Power BI</div>
+    <div class="skill"><strong>Tools</strong><br>Git, Linux, Airflow basics</div>
+  </div>
 </section>
 
-<!-- EXPERIENCE -->
+<!-- EXPERIENCE (UNCHANGED IMAGES) -->
 <section id="experience" class="section reveal">
-    <h2>Work Experience</h2>
+  <h2>Work Experience</h2>
 
-    <!-- Accenture -->
-    <div class="exp-card reveal">
-        <img src="accenture.png" class="exp-logo square-logo" />
-        <div class="exp-info">
-            <h3>Application Development Associate</h3>
-            <p class="date">Accenture • 2022 – 2023</p>
+  <div class="experience-list">
 
-            <h4>Advanced Java Training</h4>
-            <ul>
-                <li>Completed intensive Advanced Java program covering OOP, JDBC, collections.</li>
-                <li>Built Java mini-projects using modular design.</li>
-                <li>Worked in Agile & SDLC environments.</li>
-            </ul>
+    <!-- 1 -->
+    <div class="exp-card">
+        <div class="exp-logo">
+            <img src="logos/inventeron.png" alt="Inventeron" />
         </div>
+
+
+
+
+      <div class="exp-info">
+        <h3>Inventeron Technologies — Data Science & Machine Learning Engineer</h3>
+        <div class="date">September 2021 – September 2022</div>
+
+        <ul>
+          <li>Developed and deployed machine learning models for real-world business use cases, focusing on data preprocessing, feature engineering, and model evaluation.</li>
+          <li>Worked on end-to-end data science workflows including data analysis, model training, and performance optimization.</li>
+          <li>Collaborated with cross-functional teams to translate business requirements into data-driven solutions.</li>
+        </ul>
+      </div>
     </div>
 
-    <!-- Dell EMC -->
-    <div class="exp-card reveal">
-        <img src="dell-emc.png" class="exp-logo square-logo" />
-        <div class="exp-info">
-            <h3>Dell EMC – iDRAC Engineering Support (via Accenture)</h3>
-            <p class="date">2022 – 2023</p>
+    <!-- 2 -->
+    <div class="exp-card">
+      <div class="exp-logo">
+        <img src="./logos/accenture.png" alt="Accenture logo" />
+      </div>
 
-            <ul>
-                <li>Performed hardware diagnostics and log analysis.</li>
-                <li>Investigated CPU, RAID, fan speed, lifecycle alerts.</li>
-                <li>Validated firmware releases & documented defects.</li>
-                <li>Analyzed LC, SEL logs and BIOS configuration.</li>
-            </ul>
-        </div>
+
+      <div class="exp-info">
+        <h3>Accenture — Associate Software Engineer</h3>
+        <div class="date">Oct 2022 – Nov 2023</div>
+
+        <ul>
+          <li><strong>Advanced Java Training</strong></li>
+          <li>Completed intensive Advanced Java program covering OOP, JDBC, and collections.</li>
+          <li>Built Java mini-projects using modular and object-oriented design principles.</li>
+          <li>Worked in Agile and SDLC-driven development environments.</li>
+        </ul>
+      </div>
     </div>
 
-    <!-- DePaul -->
-    <div class="exp-card reveal">
-        <img src="depaul.png" class="exp-logo square-logo" />
-        <div class="exp-info">
-            <h3>Entrance Attendant & Sports Supervisor</h3>
-            <p class="date">Ray Meyer Fitness Center • 2023 – 2025</p>
+    <!-- 3 -->
+    <div class="exp-card">
+      <div class="exp-logo">
+        <img src="./logos/dell-emc.png" alt="Dell EMC logo" />
+      </div>
 
-            <ul>
-                <li>Managed front-desk operations and member check-ins.</li>
-                <li>Supervised sports facilities and student staff.</li>
-            </ul>
-        </div>
+
+      <div class="exp-info">
+        <h3>Dell EMC — Application Developer (iDRAC Platform)</h3>
+        <div class="date">Nov 2022 – Nov 2023</div>
+
+        <ul>
+          <li>Performed hardware diagnostics and log analysis for enterprise server systems.</li>
+          <li>Investigated CPU, RAID, fan speed, and lifecycle controller alerts.</li>
+          <li>Validated firmware releases and analyzed LC, SEL logs, and BIOS configurations.</li>
+        </ul>
+      </div>
     </div>
+
+    <!-- 4 -->
+    <div class="exp-card">
+      <div class="exp-logo">
+        <img src="./logos/depaul.png" class="logo-wide" alt="DePaul University logo" />
+      </div>
+
+
+
+      <div class="exp-info">
+        <h3>DePaul University — Sports Supervisor • Building Manager • Entrance Attendant</h3>
+        <div class="date">June 2024 – November 2025</div>
+
+        <ul>
+            <li>Collected and tracked facility usage data, incident logs, and compliance metrics to support operational reporting and efficiency analysis.</li>
+            <li>Supervised sports facilities, events, and student staff, optimizing schedules and resolving operational issues in real time.</li>
+            <li>Maintained access control and front-desk systems, ensuring accurate data records and reliable operational reporting.</li>
+        </ul>
+
+        </div>
+     </div>
+
+  </div>
 </section>
 
-<!-- PROJECTS -->
+
+
+<<!-- PROJECTS -->
 <section id="projects" class="section reveal">
-    <h2>Featured Projects</h2>
+  <h2>Featured Projects</h2>
 
-    <div class="projects-grid">
-        <div class="project-card reveal">
-            <h3>Stock Movement Prediction — LSTM + Sentiment</h3>
-            <p>Predicting stock direction using Twitter sentiment + LSTM.</p>
-            <p class="tech">Python · LSTM · VADER</p>
-            <a href="https://github.com/SparshikaDinesh" class="project-btn" target="_blank">View</a>
-        </div>
-    
-        <div class="project-card reveal">
-            <h3>NYC Taxi Demand Forecasting Pipeline</h3>
-            <p>PySpark ETL pipeline on AWS EMR + Airflow orchestration.</p>
-            <p class="tech">PySpark · AWS · Airflow</p>
-            <a href="https://github.com/SparshikaDinesh/NYC-Taxi-demand-forecast" class="project-btn">View</a>
-        </div>
+    <p class="section-note">
+        Selected projects demonstrating applied machine learning, data engineering, and analytics in real-world scenarios.
+    </p>
 
-        <div class="project-card reveal">
-            <h3>US Diabetes Prediction</h3>
-            <p>Risk prediction using SMOTE, XGBoost, SHAP.</p>
-            <p class="tech">XGBoost · SMOTE · SHAP</p>
-            <a href="https://github.com/SparshikaDinesh/health-disease-prediction" class="project-btn">View</a>
-        </div>
 
-        <div class="project-card reveal">
-            <h3>Automobile Sales Insights</h3>
-            <p>PCA + RFM segmentation and dashboarding.</p>
-            <p class="tech">PCA · Python</p>
-            <a href="https://github.com/SparshikaDinesh/Data-Science-Projects/tree/main/Automobile_Sales_Insights" class="project-btn">View</a>
-        </div>
-
-        <div class="project-card reveal">
-            <h3>Flight Delay Prediction Dashboard</h3>
-            <p>Interactive ML dashboard predicting US flight delays using Random Forest + XGBoost.</p>
-            <p class="tech">Python · XGBoost · Random Forest · Streamlit</p>
-            <a href="https://github.com/SparshikaDinesh/flight_delay_dashboard"
-               class="project-btn"
-               target="_blank">View</a>
-        </div>
-        
+  <div class="projects-grid featured-grid">
+    <div class="project-card reveal">
+      <h3>Stock Movement Prediction — LSTM + Sentiment</h3>
+      <p>Predicting stock direction using Twitter sentiment + LSTM.</p>
+      <p class="tech">Python · LSTM · VADER</p>
+      <a class="project-btn" href="https://github.com/SparshikaDinesh" target="_blank" rel="noopener">View Project</a>
     </div>
 
-    <h2 class="section-subtitle">More Projects</h2>
-
-    <div class="projects-grid">
-        <div class="project-card reveal">
-            <h3>Advanced ML — Term Deposit</h3>
-            <a href="https://github.com/SparshikaDinesh/Data-Science-Projects/tree/main/Advanced_ML_Term_Deposit">View</a>
-        </div>
-
-        <div class="project-card reveal">
-            <h3>Road Traffic Accident Analysis</h3>
-            <a href="https://github.com/SparshikaDinesh/Data-Science-Projects/tree/main/Road_Traffic_Accident_Analysis">View</a>
-        </div>
-
-        <div class="project-card reveal">
-            <h3>Demographic Credit Card Analysis</h3>
-            <a href="https://github.com/SparshikaDinesh/Data-Science-Projects/tree/main/Demographic_CreditCard_Analysis">View</a>
-        </div>
-
-        <div class="project-card reveal">
-            <h3>COVID-19 Data Analysis</h3>
-            <a href="https://github.com/SparshikaDinesh/Data-Science-Projects/tree/main/COVID19_Data_Analysis">View</a>
-        </div>
+    <div class="project-card reveal">
+      <h3>NYC Taxi Demand Forecasting Pipeline</h3>
+      <p>PySpark ETL pipeline on AWS EMR + Airflow orchestration.</p>
+      <p class="tech">PySpark · AWS · Airflow</p>
+      <a class="project-btn" href="https://github.com/SparshikaDinesh/NYC-Taxi-demand-forecast" target="_blank" rel="noopener">View Project</a>
     </div>
-   
-</section>
 
-<!-- CERTIFICATIONS -->
-<section class="section reveal">
-   <h2>Certifications 🚀</h2>
-
-
-    <div class="cert-grid">
-
-        <div class="cert-card">Generative AI Specialization — DeepLearning.AI</div>
-        <div class="cert-card">AWS Cloud Practitioner Essentials — AWS</div>
-        <div class="cert-card">Advanced Java Training — Accenture</div>
-        <div class="cert-card">Python for Data Science & ML — DePaul</div>
-        <div class="cert-card">SQL & Databases — DePaul</div>
-        <div class="cert-card">Data Mining — DePaul</div>
-        <div class="cert-card">Deep Learning Concepts — DePaul</div>
-        <div class="cert-card">Power BI — Self Learning</div>
-        <div class="cert-card">QuickSuite GenAI Workshop</div>
-
+    <div class="project-card reveal">
+      <h3>US Diabetes Prediction</h3>
+      <p>Risk prediction using SMOTE, XGBoost, and SHAP explainability.</p>
+      <p class="tech">Python · XGBoost · SHAP</p>
+      <a class="project-btn" href="https://github.com/SparshikaDinesh/health-disease-prediction" target="_blank" rel="noopener">View Project</a>
     </div>
+
+    <div class="project-card reveal">
+      <h3>Automobile Sales Insights</h3>
+      <p>PCA + RFM segmentation and dashboarding insights.</p>
+      <p class="tech">Python · PCA · Analytics</p>
+      <a class="project-btn" href="https://github.com/SparshikaDinesh/Data-Science-Projects/tree/main/Automobile_Sales_Insights" target="_blank" rel="noopener">View Project</a>
+    </div>
+
+    <div class="project-card reveal">
+      <h3>Healthcare Inpatient Analytics & Cost Prediction</h3>
+      <p>Power BI dashboards + ML to analyze claims, length of stay, and predict total payment.</p>
+      <p class="tech">Power BI · Python · Pandas · Random Forest</p>
+      <a class="project-btn" href="https://github.com/SparshikaDinesh" target="_blank" rel="noopener">View Project</a>
+    </div>
+
+    <div class="project-card reveal">
+      <h3>Flight Delay Prediction Dashboard</h3>
+      <p>Interactive ML dashboard for US flight delays (RF + XGBoost).</p>
+      <p class="tech">Python · Random Forest · XGBoost · Streamlit</p>
+      <a class="project-btn" href="https://github.com/SparshikaDinesh/flight_delay_dashboard" target="_blank" rel="noopener">View Project</a>
+    </div>
+  </div>
+
+  <h2 class="section-subtitle">More Projects</h2>
+
+  <div class="projects-grid more-grid">
+    <div class="project-card compact reveal">
+      <h3>Advanced ML — Term Deposit</h3>
+      <p class="mini-tech">ML · Classification</p>
+      <a class="project-btn" href="https://github.com/SparshikaDinesh/Data-Science-Projects/tree/main/Advanced_ML_Term_Deposit" target="_blank" rel="noopener">View Project</a>
+    </div>
+
+    <div class="project-card compact reveal">
+      <h3>Road Traffic Accident Analysis</h3>
+      <p class="mini-tech">EDA · Insights</p>
+      <a class="project-btn" href="https://github.com/SparshikaDinesh/Data-Science-Projects/tree/main/Road_Traffic_Accident_Analysis" target="_blank" rel="noopener">View Project</a>
+    </div>
+
+    <div class="project-card compact reveal">
+      <h3>Demographic Credit Card Analysis</h3>
+      <p class="mini-tech">EDA · Segmentation</p>
+      <a class="project-btn" href="https://github.com/SparshikaDinesh/Data-Science-Projects/tree/main/Demographic_CreditCard_Analysis" target="_blank" rel="noopener">View Project</a>
+    </div>
+
+    <div class="project-card compact reveal">
+      <h3>COVID-19 Data Analysis</h3>
+      <p class="mini-tech">Time Series · Visualization</p>
+      <a class="project-btn" href="https://github.com/SparshikaDinesh/Data-Science-Projects/tree/main/COVID19_Data_Analysis" target="_blank" rel="noopener">View Project</a>
+    </div>
+  </div>
 </section>
 
 
-<!-- CONTACT -->
+<!-- CERTIFICATIONS (UNCHANGED IMAGES) -->
+<section id="certifications" class="section reveal">
+
+  <div class="section-head">
+    <h2>Certifications</h2>
+    <p class="section-note">Professional certificates & additional training</p>
+  </div>
+
+  <h3 class="cert-heading primary">Professional Certificates</h3>
+
+<div class="cert-grid pro">
+
+  <!-- Microsoft AI & ML Engineering -->
+  <article class="cert-card pro reveal">
+    <div class="cert-top">
+      <img src="logos/microsoft.png" class="cert-logo" alt="Microsoft" />
+      <div class="cert-meta">
+        <h3>Microsoft AI & ML Engineering</h3>
+        <p>Professional Certificate</p>
+      </div>
+    </div>
+    <div class="cert-bottom">
+      <span class="cert-date">2026</span>
+      <a class="cert-btn" target="_blank" rel="noopener"
+         href="https://coursera.org/verify/professional-cert/JZKW2NZ1TD7T">Verify</a>
+    </div>
+  </article>
+
+  <!-- Google Advanced Data Analytics -->
+  <article class="cert-card pro reveal">
+    <div class="cert-top">
+      <img src="logos/google.png" class="cert-logo" alt="Google" />
+      <div class="cert-meta">
+        <h3>Google Advanced Data Analytics</h3>
+        <p>Professional Certificate</p>
+      </div>
+    </div>
+    <div class="cert-bottom">
+      <span class="cert-date">2026</span>
+      <a class="cert-btn" target="_blank" rel="noopener"
+         href="https://coursera.org/verify/professional-cert/125HJW35RFYC">Verify</a>
+    </div>
+  </article>
+
+  <!-- IBM Data Engineering -->
+  <article class="cert-card pro reveal">
+    <div class="cert-top">
+      <img src="logos/ibm.png" class="cert-logo" alt="IBM" />
+      <div class="cert-meta">
+        <h3>IBM Data Engineering</h3>
+        <p>Professional Certificate</p>
+      </div>
+    </div>
+    <div class="cert-bottom">
+      <span class="cert-date">2026</span>
+      <a class="cert-btn" target="_blank" rel="noopener"
+         href="https://coursera.org/verify/20X0KGMXIVHS">Verify</a>
+    </div>
+  </article>
+
+  <!-- Microsoft Power BI Data Analyst -->
+  <article class="cert-card pro reveal">
+    <div class="cert-top">
+      <img src="logos/microsoft.png" class="cert-logo" alt="Microsoft" />
+      <div class="cert-meta">
+        <h3>Microsoft Power BI Data Analyst</h3>
+        <p>Professional Certificate</p>
+      </div>
+    </div>
+    <div class="cert-bottom">
+      <span class="cert-date">2026</span>
+      <a class="cert-btn" target="_blank" rel="noopener"
+         href="https://coursera.org/verify/professional-cert/NZPAAO49X6PE">Verify</a>
+    </div>
+  </article>
+
+  <!-- Full Stack Web Development -->
+  <article class="cert-card pro reveal">
+    <div class="cert-top">
+      <img src="logos/inventeron.png" class="cert-logo" alt="Inventeron" />
+      <div class="cert-meta">
+        <h3>Full Stack Web Development Internship</h3>
+        <p>Professional Certificate</p>
+      </div>
+    </div>
+    <div class="cert-bottom">
+      <span class="cert-date">2022</span>
+      <a class="cert-btn" target="_blank" rel="noopener"
+         href="certs/inventeron-web-development.pdf">View</a>
+    </div>
+  </article>
+
+  <!-- ✅ Generative AI Engineering & Analytics (MUST be INSIDE this div) -->
+  <article class="cert-card pro reveal">
+  <div class="cert-top">
+    <img src="logos/starweaver.png" alt="Generative AI" class="cert-logo cert-logo-round" />
+    <div class="cert-meta">
+      <h3>Generative AI Engineering & Analytics</h3>
+      <p>Professional Certificate</p>
+    </div>
+  </div>
+
+  <div class="cert-bottom">
+    <span class="cert-date">2025</span>
+    <a class="cert-btn" href="#" target="_blank" rel="noopener">View</a>
+  </div>
+</article>
+
+
+</div>
+
+
+
+
+  <h3 class="cert-heading secondary">Professional Development</h3>
+
+  <div class="cert-grid simple">
+    <div class="cert-row reveal">
+      <span class="cert-name">GenAI Data and Analytics Academy</span>
+      <span class="cert-provider">Coursera • <a class="cert-link" target="_blank" rel="noopener"
+        href="https://coursera.org/verify/specialization/40ROMU74S8VE">Verify</a></span>
+    </div>
+
+    <div class="cert-row reveal">
+      <span class="cert-name">Generative AI Specialization</span>
+      <span class="cert-provider">DeepLearning.AI</span>
+    </div>
+
+    <div class="cert-row reveal">
+      <span class="cert-name">AWS Cloud Practitioner Essentials</span>
+      <span class="cert-provider">Amazon Web Services (AWS)</span>
+    </div>
+
+    <div class="cert-row reveal">
+      <span class="cert-name">Advanced Java Training</span>
+      <span class="cert-provider">Accenture</span>
+    </div>
+
+    <div class="cert-row reveal">
+      <span class="cert-name">Power BI</span>
+      <span class="cert-provider">Self-Directed Learning</span>
+    </div>
+
+    <div class="cert-row reveal">
+      <span class="cert-name">QuickSuite GenAI Workshop</span>
+      <span class="cert-provider">Workshop</span>
+    </div>
+  </div>
+
+  <h3 class="cert-heading academic">DePaul University</h3>
+
+  <div class="cert-grid compact">
+    <div class="cert-card compact reveal">
+      <div class="cert-title">Advanced Machine Learning</div>
+      <div class="cert-org">Model selection, regularization, and evaluation strategies</div>
+    </div>
+
+    <div class="cert-card compact reveal">
+      <div class="cert-title">Neural Networks & Deep Learning</div>
+      <div class="cert-org">Neural architectures, backpropagation, and deep learning concepts</div>
+    </div>
+
+    <div class="cert-card compact reveal">
+      <div class="cert-title">Big Data & Scalable Analytics</div>
+      <div class="cert-org">Distributed data processing and large-scale analytics</div>
+    </div>
+
+    <div class="cert-card compact reveal">
+      <div class="cert-title">Machine Learning Applications</div>
+      <div class="cert-org">End-to-end ML pipelines and applied modeling</div>
+    </div>
+
+    <div class="cert-card compact reveal">
+      <div class="cert-title">Databases & Data Modeling</div>
+      <div class="cert-org">SQL analytics, schema design, and database programming</div>
+    </div>
+
+    <div class="cert-card compact reveal">
+      <div class="cert-title">Statistical Analysis & Regression</div>
+      <div class="cert-org">Regression techniques and statistical interpretation</div>
+    </div>
+
+    <div class="cert-card compact reveal">
+      <div class="cert-title">Data Visualization & Storytelling</div>
+      <div class="cert-org">Visual analytics and data-driven communication</div>
+    </div>
+  </div>
+</section>
+
+
+<!-- BEYOND WORK -->
+<section id="beyond" class="section reveal">
+  <h2>Beyond Work</h2>
+  <p class="section-note">A few things I enjoy outside of data and ML.</p>
+
+  <div class="beyond-grid">
+    <div class="beyond-card">
+      <h3>🏐 Sports & Leadership</h3>
+      <p>
+        National-level volleyball player in India. Volleyball captain (6+ years) and
+        throwball captain (4+ years).
+      </p>
+    </div>
+
+    <div class="beyond-card">
+      <h3>🎨 Art & Creativity</h3>
+      <p>
+        I enjoy painting and minimalist sketching—simple portraits, design ideas, and creative exploration.
+      </p>
+    </div>
+
+    <div class="beyond-card">
+      <h3>🌍 Exploring</h3>
+      <p>
+        I love discovering new places, trying new food, and exploring cities whenever I get time.
+      </p>
+    </div>
+
+    <div class="beyond-card">
+      <h3>📚 Learning & Growth</h3>
+      <p>
+        I enjoy workshops, professional sessions, and hands-on learning to keep improving my skills.
+      </p>
+    </div>
+
+    <div class="beyond-card">
+      <h3>💪 Fitness</h3>
+      <p>
+        The gym helps me reset and stay consistent—good energy, discipline, and stress relief.
+      </p>
+    </div>
+  </div>
+</section>
+
+
+
+<!-- CONTACT (UNCHANGED IMAGES) -->
 <section id="contact" class="section reveal contact-section">
-    <h2>Contact</h2>
-    <p>If you'd like to discuss data engineering, ML, or analytics roles, feel free to reach out.</p>
+  <h2>Contact</h2>
+  <p>If you'd like to discuss data engineering, ML, or analytics roles, feel free to reach out.</p>
 
-    <div class="contact-row">
-        <a href="mailto:sparshikaajmaan707@gmail.com" class="contact-item">
-            <img src="email-small.png" class="contact-icon" alt="Email" />
-            <span>Email</span>
-        </a>
+  <div class="contact-row">
+    <a href="mailto:adsparshika@gmail.com" class="contact-item">
+      <img src="email-small.png" class="contact-icon" alt="Email" />
+      <span>Email</span>
+    </a>
 
-        <a href="https://github.com/SparshikaDinesh" target="_blank" class="contact-item">
-            <img src="github-small.png" class="contact-icon" alt="GitHub" />
-            <span>GitHub</span>
-        </a>
+    <a href="https://github.com/SparshikaDinesh" target="_blank" class="contact-item">
+      <img src="github-small.png" class="contact-icon" alt="GitHub" />
+      <span>GitHub</span>
+    </a>
 
-        <a href="https://www.linkedin.com/in/sparshika-ajmaan-dinesh-kumar-67b018215/"
-           target="_blank" class="contact-item">
-            <img src="linkedin-small.png" class="contact-icon" alt="LinkedIn" />
-            <span>LinkedIn</span>
-        </a>
-    </div>
+    <a href="https://www.linkedin.com/in/sparshika-ajmaan-dinesh-kumar-67b018215/"
+       target="_blank" class="contact-item">
+      <img src="linkedin-small.png" class="contact-icon" alt="LinkedIn" />
+      <span>LinkedIn</span>
+    </a>
+  </div>
 </section>
 
 <!-- TYPING EFFECT + SCROLL ANIMATION -->
 <script>
-    const lines = [
-        "open to work in Data Engineering.",
-        "open to work in Data Science.",
-        "open to work in Machine Learning Engineering.",
-        "open to work in Cloud & Data Engineering.",
-        "open to work in Data Analytics.",
-        "available for Hybrid and On-Site roles.",
-        "open to relocation across the U.S.",
-        "skilled in Python, SQL, AWS, PySpark & ML."
-    ];
+  const lines = [
+    "open to work in Data Engineering.",
+    "open to work in Data Science.",
+    "open to work in Machine Learning Engineering.",
+    "open to work in Cloud & Data Engineering.",
+    "open to work in Data Analytics.",
+    "available for Hybrid and On-Site roles.",
+    "open to relocation across the U.S.",
+    "skilled in Python, SQL, AWS, PySpark & ML."
+  ];
 
-    let index = 0, char = 0, deleting = false;
+  let index = 0, char = 0, deleting = false;
 
-    function type() {
-        const current = lines[index];
-        const typingText = document.getElementById("typing-text");
+  function type() {
+    const current = lines[index];
+    const typingText = document.getElementById("typing-text");
+    if (!typingText) return;
 
-        if (!deleting) typingText.textContent = current.substring(0, char++);
-        else typingText.textContent = current.substring(0, char--);
+    if (!deleting) typingText.textContent = current.substring(0, char++);
+    else typingText.textContent = current.substring(0, char--);
 
-        if (!deleting && char === current.length + 6) deleting = true;
-        if (deleting && char === 0) {
-            deleting = false;
-            index = (index + 1) % lines.length;
-        }
-
-        setTimeout(type, 70);
+    if (!deleting && char === current.length + 6) deleting = true;
+    if (deleting && char === 0) {
+      deleting = false;
+      index = (index + 1) % lines.length;
     }
-    type();
 
-    // SCROLL REVEAL
-    const reveals = document.querySelectorAll(".reveal");
-    const observer = new IntersectionObserver(
-        entries =>
-            entries.forEach(entry => {
-                if (entry.isIntersecting) entry.target.classList.add("visible");
-            }),
-        { threshold: 0.2 }
-    );
-    reveals.forEach(el => observer.observe(el));
+    setTimeout(type, 70);
+  }
+  type();
+
+  // SCROLL REVEAL
+  const reveals = document.querySelectorAll(".reveal");
+  const observer = new IntersectionObserver(
+    entries => entries.forEach(entry => {
+      if (entry.isIntersecting) entry.target.classList.add("visible");
+    }),
+    { threshold: 0.2 }
+  );
+  reveals.forEach(el => observer.observe(el));
 </script>
 
 </body>
