@@ -1421,3 +1421,6 @@ a{ color:inherit; }
     grid-template-columns: 1fr !important;
   }
 }
+.cert-heading.academic {
+  color: rgba(255, 255, 255, 0.95) !important;
+}
