@@ -1436,4 +1436,20 @@ a{ color:inherit; }
   align-items: center;
   text-decoration: none;
 }
+/* FORCE Contact icons into one row (override anything above) */
+.contact-row {
+  display: flex !important;
+  flex-direction: row !important;
+  justify-content: center !important;
+  align-items: center !important;
+  gap: 28px !important;
+  flex-wrap: nowrap !important;
+}
+
+.contact-row .contact-item {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  text-decoration: none !important;
+}
 
