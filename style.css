@@ -1452,4 +1452,18 @@ a{ color:inherit; }
   align-items: center !important;
   text-decoration: none !important;
 }
+.contact-row{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 28px;
+  flex-wrap: nowrap;
+}
+
+.contact-item{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+}
 
