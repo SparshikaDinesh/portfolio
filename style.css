@@ -1403,4 +1403,23 @@ a{ color:inherit; }
   position: relative;
   z-index: 1;
 }
+/* Academics: force 2 columns like Professional Development */
+.cert-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(320px, 1fr));
+  gap: 18px;
+  align-items: stretch;
+}
+
+/* Make cards fill grid cells nicely */
+.cert-grid .cert-card {
+  width: 100%;
+}
+
+/* Mobile: switch to 1 column */
+@media (max-width: 900px) {
+  .cert-grid {
+    grid-template-columns: 1fr;
+  }
+}
 
