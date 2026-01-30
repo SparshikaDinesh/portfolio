@@ -1377,3 +1377,29 @@ a{ color:inherit; }
   z-index: 1;
 }
 
+/* =========================
+   HERO (FINAL OVERRIDE)
+========================= */
+.header-card{
+  background: rgba(0,0,0,0.35) !important;
+}
+
+.header-card.chicago-bg{
+  background-image: url("./logos/chicago-bg.jpg") !important;
+  background-size: cover !important;
+  background-position: center !important;
+  background-repeat: no-repeat !important;
+}
+
+.header-card.chicago-bg::before{
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.65);
+  z-index: 0;
+}
+
+.header-card > *{
+  position: relative;
+  z-index: 1;
+}
