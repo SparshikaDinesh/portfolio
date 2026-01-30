@@ -1403,3 +1403,21 @@ a{ color:inherit; }
   position: relative;
   z-index: 1;
 }
+/* FORCE Professional Development to match the old 2-column pattern */
+.cert-grid.simple{
+  display: grid !important;
+  grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  gap: 12px !important;
+  max-width: 920px;
+  margin: 0 auto;
+}
+
+.cert-row{
+  width: 100%;
+}
+
+@media (max-width: 980px){
+  .cert-grid.simple{
+    grid-template-columns: 1fr !important;
+  }
+}
