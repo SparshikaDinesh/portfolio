@@ -1794,3 +1794,74 @@ a{ color:inherit; }
   line-height: 1.5;
   padding-left: 38px;
 }
+.skills-box-grid{
+  margin-top: 26px;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0,1fr));
+  gap: 22px;
+}
+
+@media (max-width: 1100px){
+  .skills-box-grid{ grid-template-columns: repeat(2,1fr); }
+}
+@media (max-width: 640px){
+  .skills-box-grid{ grid-template-columns: 1fr; }
+}
+
+.skill-box{
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.12);
+  border-radius: 18px;
+  padding: 18px;
+  backdrop-filter: blur(12px);
+  transition: transform .3s ease, box-shadow .3s ease, border-color .3s ease;
+  cursor: pointer;
+}
+
+.skill-box:hover{
+  transform: translateY(-8px);
+  border-color: rgba(138,43,226,0.45);
+  box-shadow: 0 0 30px rgba(138,43,226,0.25);
+}
+
+/* Head */
+.skill-head{
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.skill-emoji{
+  width: 34px;
+  height: 34px;
+  border-radius: 10px;
+  display: grid;
+  place-items: center;
+  background: rgba(255,255,255,0.10);
+  border: 1px solid rgba(255,255,255,0.15);
+  font-size: 18px;
+}
+
+.skill-title{
+  font-size: 15px;
+  font-weight: 600;
+  color: rgba(255,255,255,0.95);
+}
+
+/* Hidden content */
+.skill-hidden{
+  margin-top: 10px;
+  font-size: 13px;
+  color: rgba(255,255,255,0.72);
+  line-height: 1.5;
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: max-height .35s ease, opacity .25s ease;
+}
+
+/* Reveal on hover */
+.skill-box:hover .skill-hidden{
+  max-height: 120px;
+  opacity: 1;
+}
