@@ -284,171 +284,88 @@
 
 <section id="skills" class="section reveal">
   <h2>Skills</h2>
-  <p class="section-note">Core tools I use to build data, ML, and cloud solutions.</p>
+  <p class="section-note">Level of skill acquired</p>
 
-  <div class="skills-grid skills-modern">
+  <div class="skills-meter-grid">
 
-    <!-- Programming -->
-    <div class="skill-card">
-      <div class="skill-head">
-        <div class="skill-icon">💻</div>
-        <div>
-          <h3>Programming</h3>
-          <p>Python, SQL, Java, R</p>
-        </div>
+    <!-- Skill item -->
+    <div class="skill-meter" data-level="5">
+      <div class="skill-label">
+        <span class="skill-emoji">🐍</span>
+        <span class="skill-name">Python</span>
       </div>
-
-      <div class="mini-bars">
-        <div class="mini-bar">
-          <span>Python</span>
-          <div class="bar"><div class="fill w-90"></div></div>
-        </div>
-        <div class="mini-bar">
-          <span>SQL</span>
-          <div class="bar"><div class="fill w-85"></div></div>
-        </div>
-      </div>
-
-      <div class="chips">
-        <span>OOP</span><span>Pandas</span><span>NumPy</span><span>APIs</span>
+      <div class="meter" aria-label="Python skill level">
+        <span class="seg"></span><span class="seg"></span><span class="seg"></span><span class="seg"></span><span class="seg"></span>
       </div>
     </div>
 
-    <!-- Data Engineering -->
-    <div class="skill-card">
-      <div class="skill-head">
-        <div class="skill-icon">🧩</div>
-        <div>
-          <h3>Data Engineering</h3>
-          <p>PySpark, ETL Pipelines</p>
-        </div>
+    <div class="skill-meter" data-level="5">
+      <div class="skill-label">
+        <span class="skill-emoji">🗄️</span>
+        <span class="skill-name">SQL</span>
       </div>
-
-      <div class="mini-bars">
-        <div class="mini-bar">
-          <span>PySpark</span>
-          <div class="bar"><div class="fill w-80"></div></div>
-        </div>
-        <div class="mini-bar">
-          <span>ETL</span>
-          <div class="bar"><div class="fill w-78"></div></div>
-        </div>
-      </div>
-
-      <div class="chips">
-        <span>Batch</span><span>Data Modeling</span><span>Orchestration</span>
+      <div class="meter">
+        <span class="seg"></span><span class="seg"></span><span class="seg"></span><span class="seg"></span><span class="seg"></span>
       </div>
     </div>
 
-    <!-- Cloud -->
-    <div class="skill-card">
-      <div class="skill-head">
-        <div class="skill-icon">☁️</div>
-        <div>
-          <h3>Cloud</h3>
-          <p>AWS S3, EMR, Glue, Lambda</p>
-        </div>
+    <div class="skill-meter" data-level="4">
+      <div class="skill-label">
+        <span class="skill-emoji">☁️</span>
+        <span class="skill-name">AWS</span>
       </div>
-
-      <div class="mini-bars">
-        <div class="mini-bar">
-          <span>AWS</span>
-          <div class="bar"><div class="fill w-75"></div></div>
-        </div>
-        <div class="mini-bar">
-          <span>Glue/EMR</span>
-          <div class="bar"><div class="fill w-70"></div></div>
-        </div>
-      </div>
-
-      <div class="chips">
-        <span>S3</span><span>IAM</span><span>CloudWatch</span><span>Serverless</span>
+      <div class="meter">
+        <span class="seg"></span><span class="seg"></span><span class="seg"></span><span class="seg"></span><span class="seg"></span>
       </div>
     </div>
 
-    <!-- ML Models -->
-    <div class="skill-card">
-      <div class="skill-head">
-        <div class="skill-icon">🤖</div>
-        <div>
-          <h3>Machine Learning</h3>
-          <p>XGBoost, Random Forest, SVM</p>
-        </div>
+    <div class="skill-meter" data-level="4">
+      <div class="skill-label">
+        <span class="skill-emoji">⚡</span>
+        <span class="skill-name">PySpark</span>
       </div>
-
-      <div class="mini-bars">
-        <div class="mini-bar">
-          <span>Modeling</span>
-          <div class="bar"><div class="fill w-78"></div></div>
-        </div>
-        <div class="mini-bar">
-          <span>Evaluation</span>
-          <div class="bar"><div class="fill w-75"></div></div>
-        </div>
-      </div>
-
-      <div class="chips">
-        <span>SHAP</span><span>SMOTE</span><span>Feature Eng</span>
+      <div class="meter">
+        <span class="seg"></span><span class="seg"></span><span class="seg"></span><span class="seg"></span><span class="seg"></span>
       </div>
     </div>
 
-    <!-- Deep Learning -->
-    <div class="skill-card">
-      <div class="skill-head">
-        <div class="skill-icon">🧠</div>
-        <div>
-          <h3>Deep Learning</h3>
-          <p>LSTM, Neural Nets</p>
-        </div>
+    <div class="skill-meter" data-level="4">
+      <div class="skill-label">
+        <span class="skill-emoji">🧪</span>
+        <span class="skill-name">Machine Learning</span>
       </div>
-
-      <div class="chips">
-        <span>PyTorch</span><span>Seq2Seq</span><span>Embeddings</span>
+      <div class="meter">
+        <span class="seg"></span><span class="seg"></span><span class="seg"></span><span class="seg"></span><span class="seg"></span>
       </div>
     </div>
 
-    <!-- NLP -->
-    <div class="skill-card">
-      <div class="skill-head">
-        <div class="skill-icon">📝</div>
-        <div>
-          <h3>NLP</h3>
-          <p>VADER, FinBERT</p>
-        </div>
+    <div class="skill-meter" data-level="3">
+      <div class="skill-label">
+        <span class="skill-emoji">🧠</span>
+        <span class="skill-name">Deep Learning</span>
       </div>
-
-      <div class="chips">
-        <span>Sentiment</span><span>Transformers</span><span>Tokenization</span>
+      <div class="meter">
+        <span class="seg"></span><span class="seg"></span><span class="seg"></span><span class="seg"></span><span class="seg"></span>
       </div>
     </div>
 
-    <!-- BI Tools -->
-    <div class="skill-card">
-      <div class="skill-head">
-        <div class="skill-icon">📊</div>
-        <div>
-          <h3>BI Tools</h3>
-          <p>Tableau, Power BI</p>
-        </div>
+    <div class="skill-meter" data-level="3">
+      <div class="skill-label">
+        <span class="skill-emoji">📝</span>
+        <span class="skill-name">NLP</span>
       </div>
-
-      <div class="chips">
-        <span>Dashboards</span><span>DAX</span><span>Storytelling</span>
+      <div class="meter">
+        <span class="seg"></span><span class="seg"></span><span class="seg"></span><span class="seg"></span><span class="seg"></span>
       </div>
     </div>
 
-    <!-- Tools -->
-    <div class="skill-card">
-      <div class="skill-head">
-        <div class="skill-icon">🛠️</div>
-        <div>
-          <h3>Tools</h3>
-          <p>Git, Linux, Airflow basics</p>
-        </div>
+    <div class="skill-meter" data-level="4">
+      <div class="skill-label">
+        <span class="skill-emoji">📊</span>
+        <span class="skill-name">Power BI / Tableau</span>
       </div>
-
-      <div class="chips">
-        <span>CLI</span><span>Version Control</span><span>Pipelines</span>
+      <div class="meter">
+        <span class="seg"></span><span class="seg"></span><span class="seg"></span><span class="seg"></span><span class="seg"></span>
       </div>
     </div>
 
