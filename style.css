@@ -1466,4 +1466,116 @@ a{ color:inherit; }
   align-items: center;
   text-decoration: none;
 }
+/* ===== SKILLS MODERN ===== */
+.skills-modern{
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 16px;
+  margin-top: 22px;
+}
+
+@media (max-width: 1100px){
+  .skills-modern{ grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 640px){
+  .skills-modern{ grid-template-columns: 1fr; }
+}
+
+.skill-card{
+  padding: 18px 18px 16px;
+  border-radius: 18px;
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.10);
+  backdrop-filter: blur(10px);
+  transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease;
+}
+
+.skill-card:hover{
+  transform: translateY(-8px);
+  border-color: rgba(138,43,226,0.45);
+  box-shadow: 0 0 30px rgba(138,43,226,0.25);
+}
+
+.skill-head{
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+  margin-bottom: 10px;
+}
+
+.skill-icon{
+  width: 40px;
+  height: 40px;
+  border-radius: 12px;
+  display: grid;
+  place-items: center;
+  font-size: 20px;
+  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,255,255,0.10);
+}
+
+.skill-card h3{
+  font-size: 15px;
+  margin: 0 0 4px;
+  letter-spacing: -0.1px;
+}
+
+.skill-card p{
+  margin: 0;
+  font-size: 13px;
+  color: rgba(255,255,255,0.75);
+  line-height: 1.4;
+}
+
+/* mini progress bars */
+.mini-bars{ margin: 12px 0 10px; }
+.mini-bar{
+  display: grid;
+  grid-template-columns: 70px 1fr;
+  gap: 10px;
+  align-items: center;
+  margin: 8px 0;
+  font-size: 12px;
+  color: rgba(255,255,255,0.75);
+}
+
+.bar{
+  height: 8px;
+  border-radius: 999px;
+  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,255,255,0.10);
+  overflow: hidden;
+}
+
+.fill{
+  height: 100%;
+  width: 50%;
+  border-radius: 999px;
+  background: linear-gradient(90deg, rgba(75,108,255,0.9), rgba(138,43,226,0.9));
+}
+
+/* widths */
+.w-90{ width: 90%; }
+.w-85{ width: 85%; }
+.w-80{ width: 80%; }
+.w-78{ width: 78%; }
+.w-75{ width: 75%; }
+.w-70{ width: 70%; }
+
+/* skill chips */
+.chips{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 10px;
+}
+
+.chips span{
+  font-size: 12px;
+  padding: 6px 10px;
+  border-radius: 999px;
+  background: rgba(0,0,0,0.28);
+  border: 1px solid rgba(255,255,255,0.10);
+  color: rgba(255,255,255,0.78);
+}
 
