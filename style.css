@@ -312,8 +312,9 @@ a{ color:inherit; }
 }
 
 
+
 /* =========================
-   EXPERIENCE (FINAL CLEAN)
+   EXPERIENCE (UPDATED LOGO SIZE)
 ========================= */
 #experience{ text-align:left; }
 #experience h2{ text-align:center; }
@@ -336,10 +337,10 @@ a{ color:inherit; }
   backdrop-filter:blur(10px);
 }
 
-/* ✅ one fixed logo container for ALL (alignment) */
+/* ✅ SAME SIZE LOGO BOX FOR ALL COMPANIES */
 .exp-logo{
-  width:72px;
-  height:56px;
+  width: 72px;
+  height: 72px;
   display:flex;
   align-items:center;
   justify-content:center;
@@ -347,23 +348,31 @@ a{ color:inherit; }
   margin-top:4px;
 }
 
-/* ✅ force all logos to look same size */
+/* ✅ LOGO FITS INSIDE WITHOUT STRETCHING */
 .exp-logo img{
-  height:44px;        /* <-- this makes them even */
-  width:auto;
-  object-fit:contain;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
   display:block;
-
-  background:transparent;
-  border:none;
-  padding:0;
-}
-.exp-logo img{
-  height:44px;
-  max-width:66px;   /* prevents super-wide logos from looking huge */
-  width:auto;
+  background: transparent;
+  border: none;
+  padding: 0;
+  box-shadow: none;
 }
 
+/* ✅ DePaul is wide: keep it readable but not too big */
+.exp-logo img[src*="depaul"]{
+  width: 110px;
+  height: auto;
+  max-height: 48px;
+}
+
+/* ✅ Accenture + Dell look bigger: reduce slightly */
+.exp-logo img[src*="accenture"],
+.exp-logo img[src*="dell"]{
+  transform: scale(0.90);
+  transform-origin: center;
+}
 
 .exp-info{ flex:1; min-width:0; }
 .exp-info h3{
@@ -390,10 +399,8 @@ a{ color:inherit; }
 
 @media (max-width:680px){
   .exp-card{ padding:18px; }
-  .exp-logo{ width:62px; height:48px; }
+  .exp-logo{ width:62px; height:62px; }
 }
-
-
 
 
 /* =========================
