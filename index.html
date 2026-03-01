@@ -161,6 +161,31 @@
       border-color: rgba(45, 108, 255, 0.35);
     }
 
+    /* ===== EXPERIENCE LOGO SIZE (your request) =====
+       This makes ALL experience logos consistent size like Accenture/Dell.
+       Wide logos (DePaul) still use .logo-wide and can remain wider. */
+    .exp-logo{
+      width: 76px;          /* same visual size for each logo */
+      height: 76px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      flex: 0 0 76px;
+    }
+    .exp-logo img{
+      width: 100%;
+      height: 100%;
+      object-fit: contain;  /* keeps aspect ratio, no stretching */
+      display:block;
+    }
+    /* DePaul wide logo stays wide but still aligned */
+    .exp-logo img.logo-wide{
+      width: 120px;
+      height: auto;
+      max-height: 52px;
+      object-fit: contain;
+    }
+
     /* Responsive */
     @media (max-width: 860px){
       .header-card{
@@ -196,7 +221,7 @@
 <div class="bg-glow bg-glow-1"></div>
 <div class="bg-glow bg-glow-2"></div>
 
-<!-- HERO SECTION (NEW) -->
+<!-- HERO SECTION -->
 <section id="home" class="header-card reveal chicago-bg">
   <div class="info-box">
     <h1 class="name">Sparshika Ajmaan Dinesh Kumar</h1>
@@ -218,12 +243,10 @@
       </a>
     </p>
 
-
-
     <p class="summary-text">
-       I design and build end-to-end data and machine learning solutions using Python, SQL, AWS, and Apache Spark, with a focus on scalable pipelines, predictive models, and cloud-native analytics that support real decision-making.
+      I design and build end-to-end data and machine learning solutions using Python, SQL, AWS, and Apache Spark,
+      with a focus on scalable pipelines, predictive models, and cloud-native analytics that support real decision-making.
     </p>
-
 
     <div class="buttons">
       <a href="https://github.com/SparshikaDinesh" target="_blank" rel="noopener" class="btn">GitHub</a>
@@ -235,17 +258,15 @@
       <span class="status-badge open">✔ Open to Work</span>
       <span class="status-badge">Data / ML / Cloud</span>
       <span class="status-badge">Hybrid / On-Site</span>
-    <span class="status-badge mode">US & India Opportunities</span>
+      <span class="status-badge mode">US & India Opportunities</span>
     </div>
   </div>
 
   <div class="photo-box">
-    <!-- If your file is profile.jpg, change this to profile.jpg -->
     <img src="profile.jpeg" class="profile-pic" alt="Sparshika profile" />
   </div>
 </section>
 
-<!-- ABOUT (OLD CONTENT STYLE) -->
 <!-- ABOUT -->
 <section id="about" class="section reveal about-old">
   <h2>About Me</h2>
@@ -281,7 +302,7 @@
   </div>
 </section>
 
-
+<!-- SKILLS -->
 <section id="skills" class="section reveal">
   <h2>Skills</h2>
   <p class="section-note">Core tools and technologies I work with</p>
@@ -293,9 +314,7 @@
         <span class="skill-emoji">🐍</span>
         <span class="skill-name">Python</span>
       </div>
-      <div class="skill-sub">
-        OOP • Pandas • NumPy • APIs • Data Processing
-      </div>
+      <div class="skill-sub">OOP • Pandas • NumPy • APIs • Data Processing</div>
     </div>
 
     <div class="skill-meter">
@@ -303,9 +322,7 @@
         <span class="skill-emoji">🗄️</span>
         <span class="skill-name">SQL</span>
       </div>
-      <div class="skill-sub">
-        Joins • Subqueries • CTEs • Window Functions • Optimization
-      </div>
+      <div class="skill-sub">Joins • Subqueries • CTEs • Window Functions • Optimization</div>
     </div>
 
     <div class="skill-meter">
@@ -313,9 +330,7 @@
         <span class="skill-emoji">☁️</span>
         <span class="skill-name">AWS</span>
       </div>
-      <div class="skill-sub">
-        S3 • Glue • EMR • Lambda • IAM • CloudWatch
-      </div>
+      <div class="skill-sub">S3 • Glue • EMR • Lambda • IAM • CloudWatch</div>
     </div>
 
     <div class="skill-meter">
@@ -323,9 +338,7 @@
         <span class="skill-emoji">⚡</span>
         <span class="skill-name">PySpark</span>
       </div>
-      <div class="skill-sub">
-        ETL • DataFrames • Transformations • Batch Processing
-      </div>
+      <div class="skill-sub">ETL • DataFrames • Transformations • Batch Processing</div>
     </div>
 
     <div class="skill-meter">
@@ -333,9 +346,7 @@
         <span class="skill-emoji">🧪</span>
         <span class="skill-name">Machine Learning</span>
       </div>
-      <div class="skill-sub">
-        XGBoost • Random Forest • SVM • Evaluation
-      </div>
+      <div class="skill-sub">XGBoost • Random Forest • SVM • Evaluation</div>
     </div>
 
     <div class="skill-meter">
@@ -343,9 +354,7 @@
         <span class="skill-emoji">🧠</span>
         <span class="skill-name">Deep Learning</span>
       </div>
-      <div class="skill-sub">
-        Neural Nets • LSTM • PyTorch • Seq Models
-      </div>
+      <div class="skill-sub">Neural Nets • LSTM • PyTorch • Seq Models</div>
     </div>
 
     <div class="skill-meter">
@@ -353,9 +362,7 @@
         <span class="skill-emoji">📝</span>
         <span class="skill-name">NLP</span>
       </div>
-      <div class="skill-sub">
-        VADER • FinBERT • Tokenization • Transformers
-      </div>
+      <div class="skill-sub">VADER • FinBERT • Tokenization • Transformers</div>
     </div>
 
     <div class="skill-meter">
@@ -363,9 +370,7 @@
         <span class="skill-emoji">📊</span>
         <span class="skill-name">Power BI / Tableau</span>
       </div>
-      <div class="skill-sub">
-        Dashboards • DAX • Storytelling
-      </div>
+      <div class="skill-sub">Dashboards • DAX • Storytelling</div>
     </div>
 
     <div class="skill-meter">
@@ -373,9 +378,7 @@
         <span class="skill-emoji">🛠️</span>
         <span class="skill-name">Git / Linux</span>
       </div>
-      <div class="skill-sub">
-        Version Control • CLI • Collaboration
-      </div>
+      <div class="skill-sub">Version Control • CLI • Collaboration</div>
     </div>
 
     <div class="skill-meter">
@@ -383,9 +386,7 @@
         <span class="skill-emoji">🧩</span>
         <span class="skill-name">Airflow</span>
       </div>
-      <div class="skill-sub">
-        DAG basics • Scheduling • Orchestration
-      </div>
+      <div class="skill-sub">DAG basics • Scheduling • Orchestration</div>
     </div>
 
     <div class="skill-meter">
@@ -393,9 +394,7 @@
         <span class="skill-emoji">🧱</span>
         <span class="skill-name">ETL Pipelines</span>
       </div>
-      <div class="skill-sub">
-        Ingestion • Transform • Load • Batch Analytics
-      </div>
+      <div class="skill-sub">Ingestion • Transform • Load • Batch Analytics</div>
     </div>
 
     <div class="skill-meter">
@@ -403,115 +402,111 @@
         <span class="skill-emoji">🧰</span>
         <span class="skill-name">Data Modeling</span>
       </div>
-      <div class="skill-sub">
-        Schema Design • Star Schema • Reporting tables
-      </div>
+      <div class="skill-sub">Schema Design • Star Schema • Reporting tables</div>
     </div>
 
   </div>
 </section>
 
-
-<!-- EXPERIENCE (UNCHANGED IMAGES) -->
+<!-- EXPERIENCE (UPDATED; DePaul/Ray kept same) -->
 <section id="experience" class="section reveal">
   <h2>Work Experience</h2>
 
   <div class="experience-list">
 
-    <!-- 1 -->
+    <!-- 1: Nefroverse -->
     <div class="exp-card">
-        <div class="exp-logo">
-            <img src="logos/inventeron.png" alt="Inventeron" />
-        </div>
-
-
-
+      <div class="exp-logo">
+        <!-- Put your file here: logos/Nefroverse_logo.jpeg -->
+        <img src="logos/Nefroverse_logo.jpeg" alt="Nefroverse Technologies logo" />
+      </div>
 
       <div class="exp-info">
-        <h3>Inventeron Technologies — Data Science & Machine Learning Engineer</h3>
-        <div class="date">September 2021 – September 2022</div>
+        <h3>Nefroverse Technologies, USA — Data Engineer</h3>
+        <div class="date">December 2024 – Present</div>
 
         <ul>
-          <li>Developed and deployed machine learning models for real-world business use cases, focusing on data preprocessing, feature engineering, and model evaluation.</li>
-          <li>Worked on end-to-end data science workflows including data analysis, model training, and performance optimization.</li>
-          <li>Collaborated with cross-functional teams to translate business requirements into data-driven solutions.</li>
+          <li>Designed and maintained enterprise data pipelines processing <strong>120M+ financial transactions daily</strong> using <strong>AWS Glue, PySpark, and Redshift</strong>, improving data availability for analytics and reporting by <strong>30%</strong>.</li>
+          <li>Built real-time streaming data pipelines using <strong>Apache Kafka</strong> and <strong>Spark Streaming</strong>, enabling low-latency ingestion and near real-time analytics across trading and risk systems.</li>
+          <li>Migrated legacy on-premise ETL workflows to <strong>AWS cloud architecture</strong>, reducing infrastructure costs by <strong>$180K annually</strong> while improving system scalability and reliability.</li>
+          <li>Optimized data processing performance through partitioning strategies, query tuning, and efficient data modeling, reducing pipeline runtime by <strong>45%</strong>.</li>
+          <li>Implemented data quality validation frameworks, monitoring, and automated alerting mechanisms to ensure SLA compliance and data integrity across production pipelines.</li>
+          <li>Developed and maintained CI/CD deployment workflows using <strong>Docker, Jenkins, and Git</strong>, improving release reliability and reducing deployment time by <strong>25%</strong>.</li>
         </ul>
       </div>
     </div>
 
-    <!-- 2 -->
+    <!-- 2: Accenture -->
     <div class="exp-card">
       <div class="exp-logo">
         <img src="./logos/accenture.png" alt="Accenture logo" />
       </div>
 
-
       <div class="exp-info">
-        <h3>Accenture — Associate Software Engineer</h3>
+        <h3>Accenture, India — Data Engineer (Associate Software Engineer)</h3>
         <div class="date">October 2022 – November 2023</div>
 
         <ul>
-          <li><strong>Advanced Java Training</strong></li>
-          <li>Completed intensive Advanced Java program covering OOP, JDBC, and collections.</li>
-          <li>Built Java mini-projects using modular and object-oriented design principles.</li>
-          <li>Worked in Agile and SDLC-driven development environments.</li>
+          <li>Engineered scalable telemetry and system log processing pipelines using <strong>Python</strong> and <strong>SQL</strong> to ingest, parse, and transform high-volume server diagnostic data for reliability and performance analytics.</li>
+          <li>Designed automated data validation and Build Verification Test (BVT) frameworks using Python-based workflows, enabling structured data quality checks, anomaly detection, and regression validation across firmware release datasets.</li>
+          <li>Developed log parsing and transformation pipelines to convert unstructured server logs into structured, analytics-ready datasets, improving failure pattern detection and downstream reporting efficiency.</li>
+          <li>Built reusable data processing scripts and SQL-based aggregation logic to extract key performance metrics from telemetry streams, enabling faster root-cause analysis and trend monitoring.</li>
+          <li>Implemented automated data quality validation mechanisms including schema checks, consistency validation, and threshold-based alerting to ensure integrity of diagnostic datasets.</li>
+          <li>Optimized large-scale log analysis workflows by refactoring Python transformations and SQL queries, reducing processing time and improving telemetry analytics responsiveness.</li>
         </ul>
       </div>
     </div>
 
-    <!-- 3 -->
+    <!-- 3: Miraicoders -->
     <div class="exp-card">
       <div class="exp-logo">
-        <img src="./logos/dell-emc.png" alt="Dell EMC logo" />
+        <!-- Put your file here: logos/miraicoders.png -->
+        <img src="logos/miraicoders.png" alt="Miraicoders Technology logo" />
       </div>
 
-
       <div class="exp-info">
-        <h3>Dell EMC — Application Developer (iDRAC Platform)</h3>
-        <div class="date">November 2022 – November 2023</div>
+        <h3>Miraicoders Technology, India — Jr. Data Engineer</h3>
+        <div class="date">January 2021 – September 2022</div>
 
         <ul>
-          <li>Performed hardware diagnostics and log analysis for enterprise server systems.</li>
-          <li>Investigated CPU, RAID, fan speed, and lifecycle controller alerts.</li>
-          <li>Validated firmware releases and analyzed LC, SEL logs, and BIOS configurations.</li>
+          <li>Collaborated in an Agile delivery environment with product, engineering, and analytics teams to improve sprint execution, increasing delivery velocity by <strong>18%</strong> and accelerating release cycles for healthcare data platforms.</li>
+          <li>Designed, developed, and optimized scalable ETL pipelines using <strong>Python, SQL, and Hadoop</strong>, improving end-to-end data processing throughput by <strong>35%</strong> across high-volume clinical datasets.</li>
+          <li>Led modernization of legacy SSIS workflows by migrating data integrations to <strong>AWS Glue</strong> and <strong>Amazon S3</strong>, reducing infrastructure overhead and enabling a fully cloud-native, scalable data integration architecture.</li>
+          <li>Built and maintained real-time data ingestion pipelines using <strong>Apache Kafka</strong>, implementing schema validation and data quality controls that improved data accuracy and consistency by <strong>28%</strong>.</li>
+          <li>Optimized Apache Spark batch processing jobs by refactoring transformations and tuning cluster configurations, reducing pipeline runtimes by <strong>32%</strong> and improving data availability for analytics and machine learning workloads.</li>
+          <li>Enabled self-service and interactive analytics by implementing <strong>Amazon Athena</strong> over partitioned S3 data lakes, reducing query latency by <strong>22%</strong> and accelerating insights for stakeholders.</li>
         </ul>
       </div>
     </div>
 
-    <!-- 4 -->
+    <!-- 4: KEEP SAME (DePaul / Ray Meyer) -->
     <div class="exp-card">
       <div class="exp-logo">
         <img src="./logos/depaul.png" class="logo-wide" alt="DePaul University logo" />
       </div>
-
-
 
       <div class="exp-info">
         <h3>DePaul University — Operations Assistant • Sports Supervisor • Building Manager • Entrance Attendant</h3>
         <div class="date">Ray Meyer Fitness and Recreation Center June 2024 – November 2025</div>
 
         <ul>
-            <li>Collected and tracked facility usage data, incident logs, and compliance metrics to support operational reporting and efficiency analysis.</li>
-            <li>Supervised sports facilities, events, and student staff, optimizing schedules and resolving operational issues in real time.</li>
-            <li>Maintained access control and front-desk systems, ensuring accurate data records and reliable operational reporting.</li>
+          <li>Collected and tracked facility usage data, incident logs, and compliance metrics to support operational reporting and efficiency analysis.</li>
+          <li>Supervised sports facilities, events, and student staff, optimizing schedules and resolving operational issues in real time.</li>
+          <li>Maintained access control and front-desk systems, ensuring accurate data records and reliable operational reporting.</li>
         </ul>
-
-        </div>
-     </div>
+      </div>
+    </div>
 
   </div>
 </section>
 
-
-
-<<!-- PROJECTS -->
+<!-- PROJECTS -->
 <section id="projects" class="section reveal">
   <h2>Featured Projects</h2>
 
-    <p class="section-note">
-        Selected projects demonstrating applied machine learning, data engineering, and analytics in real-world scenarios.
-    </p>
-
+  <p class="section-note">
+    Selected projects demonstrating applied machine learning, data engineering, and analytics in real-world scenarios.
+  </p>
 
   <div class="projects-grid featured-grid">
     <div class="project-card reveal">
@@ -580,8 +575,7 @@
   </div>
 </section>
 
-
-<!-- CERTIFICATIONS (UNCHANGED IMAGES) -->
+<!-- CERTIFICATIONS (unchanged from your file) -->
 <section id="certifications" class="section reveal">
 
   <div class="section-head">
@@ -591,223 +585,203 @@
 
   <h3 class="cert-heading primary">Professional Certificates</h3>
 
-<div class="cert-grid pro">
+  <div class="cert-grid pro">
 
-  <!-- Microsoft AI & ML Engineering -->
-  <article class="cert-card pro reveal">
-    <div class="cert-top">
-      <img src="logos/microsoft.png" class="cert-logo" alt="Microsoft" />
-      <div class="cert-meta">
-        <h3>Microsoft AI & ML Engineering</h3>
-        <p>Professional Certificate</p>
+    <article class="cert-card pro reveal">
+      <div class="cert-top">
+        <img src="logos/microsoft.png" class="cert-logo" alt="Microsoft" />
+        <div class="cert-meta">
+          <h3>Microsoft AI & ML Engineering</h3>
+          <p>Professional Certificate</p>
+        </div>
       </div>
-    </div>
-    <div class="cert-bottom">
-      <span class="cert-date">2026</span>
-      <a class="cert-btn" target="_blank" rel="noopener"
-         href="https://coursera.org/verify/professional-cert/JZKW2NZ1TD7T">Verify</a>
-    </div>
-  </article>
-
-  <!-- Google Advanced Data Analytics -->
-  <article class="cert-card pro reveal">
-    <div class="cert-top">
-      <img src="logos/google.png" class="cert-logo" alt="Google" />
-      <div class="cert-meta">
-        <h3>Google Advanced Data Analytics</h3>
-        <p>Professional Certificate</p>
+      <div class="cert-bottom">
+        <span class="cert-date">2026</span>
+        <a class="cert-btn" target="_blank" rel="noopener"
+           href="https://coursera.org/verify/professional-cert/JZKW2NZ1TD7T">Verify</a>
       </div>
-    </div>
-    <div class="cert-bottom">
-      <span class="cert-date">2026</span>
-      <a class="cert-btn" target="_blank" rel="noopener"
-         href="https://coursera.org/verify/professional-cert/125HJW35RFYC">Verify</a>
-    </div>
-  </article>
+    </article>
 
-  <!-- IBM Data Engineering -->
-  <article class="cert-card pro reveal">
-    <div class="cert-top">
-      <img src="logos/ibm.png" class="cert-logo" alt="IBM" />
-      <div class="cert-meta">
-        <h3>IBM Data Engineering</h3>
-        <p>Professional Certificate</p>
+    <article class="cert-card pro reveal">
+      <div class="cert-top">
+        <img src="logos/google.png" class="cert-logo" alt="Google" />
+        <div class="cert-meta">
+          <h3>Google Advanced Data Analytics</h3>
+          <p>Professional Certificate</p>
+        </div>
       </div>
-    </div>
-    <div class="cert-bottom">
-      <span class="cert-date">2026</span>
-      <a class="cert-btn" target="_blank" rel="noopener"
-         href="https://coursera.org/verify/20X0KGMXIVHS">Verify</a>
-    </div>
-  </article>
-
-  <!-- Microsoft Power BI Data Analyst -->
-  <article class="cert-card pro reveal">
-    <div class="cert-top">
-      <img src="logos/microsoft.png" class="cert-logo" alt="Microsoft" />
-      <div class="cert-meta">
-        <h3>Microsoft Power BI Data Analyst</h3>
-        <p>Professional Certificate</p>
+      <div class="cert-bottom">
+        <span class="cert-date">2026</span>
+        <a class="cert-btn" target="_blank" rel="noopener"
+           href="https://coursera.org/verify/professional-cert/125HJW35RFYC">Verify</a>
       </div>
-    </div>
-    <div class="cert-bottom">
-      <span class="cert-date">2026</span>
-      <a class="cert-btn" target="_blank" rel="noopener"
-         href="https://coursera.org/verify/professional-cert/NZPAAO49X6PE">Verify</a>
-    </div>
-  </article>
+    </article>
 
-  <!-- Full Stack Web Development -->
-  <article class="cert-card pro reveal">
-    <div class="cert-top">
-      <img src="logos/inventeron.png" class="cert-logo" alt="Inventeron" />
-      <div class="cert-meta">
-        <h3>Full Stack Web Development Internship</h3>
-        <p>Professional Certificate</p>
+    <article class="cert-card pro reveal">
+      <div class="cert-top">
+        <img src="logos/ibm.png" class="cert-logo" alt="IBM" />
+        <div class="cert-meta">
+          <h3>IBM Data Engineering</h3>
+          <p>Professional Certificate</p>
+        </div>
       </div>
-    </div>
-    <div class="cert-bottom">
-      <span class="cert-date">2022</span>
-      <a class="cert-btn" target="_blank" rel="noopener"
-         href="certs/inventeron-web-development.pdf">View</a>
-    </div>
-  </article>
+      <div class="cert-bottom">
+        <span class="cert-date">2026</span>
+        <a class="cert-btn" target="_blank" rel="noopener"
+           href="https://coursera.org/verify/20X0KGMXIVHS">Verify</a>
+      </div>
+    </article>
 
-  <!-- ✅ Generative AI Engineering & Analytics (MUST be INSIDE this div) -->
-  <article class="cert-card pro reveal">
-  <div class="cert-top">
-    <img src="logos/starweaver.png" alt="Generative AI" class="cert-logo cert-logo-round" />
-    <div class="cert-meta">
-      <h3>Generative AI Engineering & Analytics</h3>
-      <p>Professional Certificate</p>
-    </div>
+    <article class="cert-card pro reveal">
+      <div class="cert-top">
+        <img src="logos/microsoft.png" class="cert-logo" alt="Microsoft" />
+        <div class="cert-meta">
+          <h3>Microsoft Power BI Data Analyst</h3>
+          <p>Professional Certificate</p>
+        </div>
+      </div>
+      <div class="cert-bottom">
+        <span class="cert-date">2026</span>
+        <a class="cert-btn" target="_blank" rel="noopener"
+           href="https://coursera.org/verify/professional-cert/NZPAAO49X6PE">Verify</a>
+      </div>
+    </article>
+
+    <article class="cert-card pro reveal">
+      <div class="cert-top">
+        <img src="logos/inventeron.png" class="cert-logo" alt="Inventeron" />
+        <div class="cert-meta">
+          <h3>Full Stack Web Development Internship</h3>
+          <p>Professional Certificate</p>
+        </div>
+      </div>
+      <div class="cert-bottom">
+        <span class="cert-date">2022</span>
+        <a class="cert-btn" target="_blank" rel="noopener"
+           href="certs/inventeron-web-development.pdf">View</a>
+      </div>
+    </article>
+
+    <article class="cert-card pro reveal">
+      <div class="cert-top">
+        <img src="logos/starweaver.png" alt="Generative AI" class="cert-logo cert-logo-round" />
+        <div class="cert-meta">
+          <h3>Generative AI Engineering & Analytics</h3>
+          <p>Professional Certificate</p>
+        </div>
+      </div>
+      <div class="cert-bottom">
+        <span class="cert-date">2025</span>
+        <a class="cert-btn" href="#" target="_blank" rel="noopener">View</a>
+      </div>
+    </article>
+
   </div>
-
-  <div class="cert-bottom">
-    <span class="cert-date">2025</span>
-    <a class="cert-btn" href="#" target="_blank" rel="noopener">View</a>
-  </div>
-</article>
-
-
-</div>
-
-
-
 
   <h3 class="cert-heading secondary">Professional Development</h3>
 
-<div class="cert-grid simple">
-  <div class="cert-row">
-    <div>
-      <div class="cert-name">Google Accelerate AI with Cloud Run Workshop</div>
-      <div class="cert-provider">Google • Chicago • Sep 2025</div>
+  <div class="cert-grid simple">
+    <div class="cert-row">
+      <div>
+        <div class="cert-name">Google Accelerate AI with Cloud Run Workshop</div>
+        <div class="cert-provider">Google • Chicago • Sep 2025</div>
+      </div>
+    </div>
+
+    <div class="cert-row">
+      <div>
+        <div class="cert-name">Android App Development</div>
+        <div class="cert-provider">Kyrion Technologies Pvt. Ltd. • Feb 2022 – Feb 2023</div>
+      </div>
+    </div>
+
+    <div class="cert-row">
+      <div>
+        <div class="cert-name">Robotics (Python)</div>
+        <div class="cert-provider">Siemens Pvt. Ltd. • Apr 2020 – Jun 2020</div>
+      </div>
+    </div>
+
+    <div class="cert-row">
+      <div>
+        <div class="cert-name">Python Programming</div>
+        <div class="cert-provider">Torus Solutions • Mar 2021 – May 2021</div>
+      </div>
+    </div>
+
+    <div class="cert-row">
+      <div>
+        <div class="cert-name">AWS Cloud Practitioner Essentials</div>
+        <div class="cert-provider">Amazon Web Services (AWS)</div>
+      </div>
+    </div>
+
+    <div class="cert-row">
+      <div>
+        <div class="cert-name">Advanced Java Training</div>
+        <div class="cert-provider">Accenture</div>
+      </div>
+    </div>
+
+    <div class="cert-row">
+      <div>
+        <div class="cert-name">Power BI</div>
+        <div class="cert-provider">Self-Directed Learning</div>
+      </div>
+    </div>
+
+    <div class="cert-row">
+      <div>
+        <div class="cert-name">QuickSuite GenAI Workshop</div>
+        <div class="cert-provider">Workshop</div>
+      </div>
     </div>
   </div>
 
-  <div class="cert-row">
-    <div>
-      <div class="cert-name">Android App Development</div>
-      <div class="cert-provider">Kyrion Technologies Pvt. Ltd. • Feb 2022 – Feb 2023</div>
+  <h3 class="cert-heading academic">Academics</h3>
+
+  <div class="cert-grid compact">
+    <div class="cert-card compact reveal">
+      <div class="cert-title">End-to-End Data Science</div>
+      <div class="cert-org">Problem framing, data preparation, modeling, evaluation, and business insights</div>
+    </div>
+
+    <div class="cert-card compact reveal">
+      <div class="cert-title">Advanced Machine Learning</div>
+      <div class="cert-org">Model selection, regularization, and evaluation strategies</div>
+    </div>
+
+    <div class="cert-card compact reveal">
+      <div class="cert-title">Neural Networks & Deep Learning</div>
+      <div class="cert-org">Neural architectures, backpropagation, and deep learning concepts</div>
+    </div>
+
+    <div class="cert-card compact reveal">
+      <div class="cert-title">Big Data & Scalable Analytics</div>
+      <div class="cert-org">Distributed data processing and large-scale analytics</div>
+    </div>
+
+    <div class="cert-card compact reveal">
+      <div class="cert-title">Machine Learning Applications</div>
+      <div class="cert-org">End-to-end ML pipelines and applied modeling</div>
+    </div>
+
+    <div class="cert-card compact reveal">
+      <div class="cert-title">Databases & Data Modeling</div>
+      <div class="cert-org">SQL analytics, schema design, and database programming</div>
+    </div>
+
+    <div class="cert-card compact reveal">
+      <div class="cert-title">Statistical Analysis & Regression</div>
+      <div class="cert-org">Regression techniques and statistical interpretation</div>
+    </div>
+
+    <div class="cert-card compact reveal">
+      <div class="cert-title">Data Visualization & Storytelling</div>
+      <div class="cert-org">Visual analytics and data-driven communication</div>
     </div>
   </div>
-
-  <div class="cert-row">
-    <div>
-      <div class="cert-name">Robotics (Python)</div>
-      <div class="cert-provider">Siemens Pvt. Ltd. • Apr 2020 – Jun 2020</div>
-    </div>
-  </div>
-
-  <div class="cert-row">
-    <div>
-      <div class="cert-name">Python Programming</div>
-      <div class="cert-provider">Torus Solutions • Mar 2021 – May 2021</div>
-    </div>
-  </div>
-
-  <div class="cert-row">
-    <div>
-      <div class="cert-name">AWS Cloud Practitioner Essentials</div>
-      <div class="cert-provider">Amazon Web Services (AWS)</div>
-    </div>
-  </div>
-
-  <div class="cert-row">
-    <div>
-      <div class="cert-name">Advanced Java Training</div>
-      <div class="cert-provider">Accenture</div>
-    </div>
-  </div>
-
-  <div class="cert-row">
-    <div>
-      <div class="cert-name">Power BI</div>
-      <div class="cert-provider">Self-Directed Learning</div>
-    </div>
-  </div>
-
-  <div class="cert-row">
-    <div>
-      <div class="cert-name">QuickSuite GenAI Workshop</div>
-      <div class="cert-provider">Workshop</div>
-    </div>
-  </div>
-</div>
-
-
-
-    
-
- <h3 class="cert-heading academic">Academics</h3>
-
-<div class="cert-grid compact">
-
-  <div class="cert-card compact reveal">
-    <div class="cert-title">End-to-End Data Science</div>
-    <div class="cert-org">
-      Problem framing, data preparation, modeling, evaluation, and business insights
-    </div>
-  </div>
-
-  <div class="cert-card compact reveal">
-    <div class="cert-title">Advanced Machine Learning</div>
-    <div class="cert-org">Model selection, regularization, and evaluation strategies</div>
-  </div>
-
-  <div class="cert-card compact reveal">
-    <div class="cert-title">Neural Networks & Deep Learning</div>
-    <div class="cert-org">Neural architectures, backpropagation, and deep learning concepts</div>
-  </div>
-
-  <div class="cert-card compact reveal">
-    <div class="cert-title">Big Data & Scalable Analytics</div>
-    <div class="cert-org">Distributed data processing and large-scale analytics</div>
-  </div>
-
-  <div class="cert-card compact reveal">
-    <div class="cert-title">Machine Learning Applications</div>
-    <div class="cert-org">End-to-end ML pipelines and applied modeling</div>
-  </div>
-
-  <div class="cert-card compact reveal">
-    <div class="cert-title">Databases & Data Modeling</div>
-    <div class="cert-org">SQL analytics, schema design, and database programming</div>
-  </div>
-
-  <div class="cert-card compact reveal">
-    <div class="cert-title">Statistical Analysis & Regression</div>
-    <div class="cert-org">Regression techniques and statistical interpretation</div>
-  </div>
-
-  <div class="cert-card compact reveal">
-    <div class="cert-title">Data Visualization & Storytelling</div>
-    <div class="cert-org">Visual analytics and data-driven communication</div>
-  </div>
-
-</div>
-
-
+</section>
 
 <!-- BEYOND WORK -->
 <section id="beyond" class="section reveal">
@@ -817,71 +791,45 @@
   <div class="beyond-grid">
     <div class="beyond-card">
       <h3>🏐 Sports & Leadership</h3>
-      <p>
-        National-level volleyball player in India. Volleyball captain (6+ years) and
-        throwball captain (4+ years).
-      </p>
+      <p>National-level volleyball player in India. Volleyball captain (6+ years) and throwball captain (4+ years).</p>
     </div>
 
     <div class="beyond-card">
       <h3>🎨 Art & Creativity</h3>
-      <p>
-        I enjoy painting and minimalist sketching—simple portraits, design ideas, and creative exploration.
-      </p>
+      <p>I enjoy painting and minimalist sketching—simple portraits, design ideas, and creative exploration.</p>
     </div>
 
     <div class="beyond-card">
       <h3>🌍 Exploring</h3>
-      <p>
-        I love discovering new places, trying new food, and exploring cities whenever I get time.
-      </p>
+      <p>I love discovering new places, trying new food, and exploring cities whenever I get time.</p>
     </div>
 
     <div class="beyond-card">
       <h3>📚 Learning & Growth</h3>
-      <p>
-        I enjoy workshops, professional sessions, and hands-on learning to keep improving my skills.
-      </p>
+      <p>I enjoy workshops, professional sessions, and hands-on learning to keep improving my skills.</p>
     </div>
-    
+
     <div class="beyond-card">
       <h4>🌍 International Conference & Event Leadership</h4>
-      <p>
-        Hosted and coordinated the ICAMES-2021 International Conference and
-        led the PES Alumni Meet 2022, bringing together international academic
-        leaders, industry experts, and alumni across regions.
-      </p>
+      <p>Hosted and coordinated the ICAMES-2021 International Conference and led the PES Alumni Meet 2022.</p>
     </div>
 
     <div class="beyond-card">
       <h4>⚙️ Hackathon & Technical Networking</h4>
-      <p>
-        Participated in a hackathon and developed a fingerprint-based ignition
-        system as an embedded systems project, integrating an optical
-        fingerprint sensor with a microcontroller and implementing secure
-        authentication logic using Embedded C.
-      </p>
+      <p>Participated in a hackathon and built a fingerprint-based ignition system using Embedded C.</p>
     </div>
 
     <div class="beyond-card">
       <h4>🧠 Curiosity-Driven Problem Solving</h4>
-      <p>
-        Naturally curious about solving problems and understanding why things
-        work the way they do, whether in technical systems, data, or real-world situations.
-      </p>
+      <p>Naturally curious about solving problems and understanding why things work the way they do.</p>
     </div>
-
 
     <div class="beyond-card">
       <h3>💪 Fitness</h3>
-      <p>
-        The gym helps me reset and stay consistent—good energy, discipline, and stress relief.
-      </p>
+      <p>The gym helps me reset and stay consistent—good energy, discipline, and stress relief.</p>
     </div>
   </div>
 </section>
-
-
 
 <!-- CONTACT -->
 <section id="contact" class="section reveal contact-section">
@@ -889,11 +837,7 @@
   <p>If you'd like to discuss data engineering, ML, or analytics roles, feel free to reach out.</p>
 
   <div class="contact-row">
-    <a
-      href="https://mail.google.com/mail/?view=cm&fs=1&to=adsparshika@gmail.com"
-      target="_blank"
-      class="contact-item"
-    >
+    <a href="https://mail.google.com/mail/?view=cm&fs=1&to=adsparshika@gmail.com" target="_blank" class="contact-item">
       <img src="email-small.png" class="contact-icon" alt="Email" />
       <span>Email</span>
     </a>
@@ -903,17 +847,12 @@
       <span>GitHub</span>
     </a>
 
-    <a
-      href="https://www.linkedin.com/in/sparshika-ajmaan-dinesh-kumar-67b018215/"
-      target="_blank"
-      class="contact-item"
-    >
+    <a href="https://www.linkedin.com/in/sparshika-ajmaan-dinesh-kumar-67b018215/" target="_blank" class="contact-item">
       <img src="linkedin-small.png" class="contact-icon" alt="LinkedIn" />
       <span>LinkedIn</span>
     </a>
   </div>
 </section>
-
 
 <!-- TYPING EFFECT + SCROLL ANIMATION -->
 <script>
