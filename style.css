@@ -2297,3 +2297,30 @@ a{ color:inherit; }
     padding-top: 0;
   }
 }
+/* ===== PROFESSIONAL DEVELOPMENT HOVER EFFECT ===== */
+
+.cert-grid.simple .cert-row {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 14px;
+  padding: 16px 18px;
+  transition: all 0.25s ease;
+  cursor: pointer;
+}
+
+/* HOVER EFFECT */
+.cert-grid.simple .cert-row:hover {
+  transform: translateY(-6px) scale(1.01);
+  background: rgba(255, 255, 255, 0.06);
+  border-color: rgba(120, 120, 255, 0.4);
+  box-shadow: 0 10px 30px rgba(80, 80, 255, 0.15);
+}
+
+/* TEXT IMPROVEMENT ON HOVER */
+.cert-row:hover .cert-name {
+  color: #ffffff;
+}
+
+.cert-row:hover .cert-provider {
+  color: rgba(255, 255, 255, 0.85);
+}
