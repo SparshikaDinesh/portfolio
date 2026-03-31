@@ -2187,3 +2187,113 @@ a{ color:inherit; }
     min-width: 52px;
   }
 }
+
+.experience-section {
+  padding: 100px 20px;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 48px;
+}
+
+.exp-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 18px;
+  padding: 28px 30px;
+  margin-bottom: 22px;
+  border-radius: 22px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+.exp-logo {
+  width: 72px;
+  min-width: 72px;
+  display: flex;
+  justify-content: center;
+  padding-top: 2px; /* pushes logo into better alignment with title */
+}
+
+.company-logo-box {
+  width: 56px;
+  height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  overflow: hidden;
+}
+
+.company-logo {
+  max-width: 34px;
+  max-height: 34px;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  display: block;
+}
+
+/* For wider logos */
+.depaul-logo {
+  max-width: 48px;
+  max-height: 18px;
+}
+
+.miraicoders-logo {
+  max-width: 46px;
+  max-height: 18px;
+}
+
+.exp-info {
+  flex: 1;
+}
+
+.exp-info h3 {
+  margin: 0 0 6px;
+  color: #ffffff;
+  font-size: 1.28rem;
+  font-weight: 700;
+  line-height: 1.35;
+}
+
+.exp-info .date {
+  color: rgba(255, 255, 255, 0.72);
+  font-size: 0.95rem;
+  margin-bottom: 14px;
+  line-height: 1.4;
+}
+
+.exp-info ul {
+  margin: 0;
+  padding-left: 18px;
+}
+
+.exp-info li {
+  color: rgba(255, 255, 255, 0.88);
+  line-height: 1.65;
+  margin-bottom: 10px;
+}
+
+/* mobile */
+@media (max-width: 768px) {
+  .exp-card {
+    flex-direction: column;
+    gap: 14px;
+    padding: 24px;
+  }
+
+  .exp-logo {
+    width: auto;
+    min-width: auto;
+    padding-top: 0;
+  }
+}
