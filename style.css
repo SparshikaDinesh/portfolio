@@ -2019,3 +2019,13 @@ a{ color:inherit; }
   color: rgba(255,255,255,0.72);
   line-height: 1.45;
 }
+
+.email{
+  background: linear-gradient(135deg, #6a5cff, #9b5cff);
+  border: none;
+}
+
+.email:hover{
+  transform: translateY(-2px);
+  opacity: 0.95;
+}
