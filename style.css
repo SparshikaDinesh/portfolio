@@ -2029,3 +2029,27 @@ a{ color:inherit; }
   transform: translateY(-2px);
   opacity: 0.95;
 }
+.company-logo-box {
+  width: 56px;
+  height: 56px;
+  min-width: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  overflow: hidden;
+}
+
+.company-logo {
+  width: 36px;
+  height: 36px;
+  object-fit: contain;
+  display: block;
+}
+.depaul-logo {
+  width: 42px;
+  height: 24px;
+  object-fit: contain;
+}
