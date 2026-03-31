@@ -2324,3 +2324,49 @@ a{ color:inherit; }
 .cert-row:hover .cert-provider {
   color: rgba(255, 255, 255, 0.85);
 }
+/* ===== UNIVERSAL CARD HOVER EFFECT ===== */
+
+.exp-card,
+.cert-card,
+.cert-row,
+.beyond-card {
+  transition: all 0.28s ease;
+  position: relative;
+}
+
+/* HOVER */
+.exp-card:hover,
+.cert-card:hover,
+.cert-row:hover,
+.beyond-card:hover {
+  transform: translateY(-8px) scale(1.01);
+  background: rgba(255, 255, 255, 0.06);
+  border-color: rgba(120, 120, 255, 0.35);
+  box-shadow: 0 14px 40px rgba(80, 80, 255, 0.18);
+}
+
+/* SUBTLE GLOW EFFECT */
+.exp-card::before,
+.cert-card::before,
+.cert-row::before,
+.beyond-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  opacity: 0;
+  transition: 0.3s;
+}
+
+.exp-card:hover::before,
+.cert-card:hover::before,
+.cert-row:hover::before,
+.beyond-card:hover::before {
+  opacity: 1;
+  box-shadow: 0 0 25px rgba(120, 120, 255, 0.18);
+}
+.exp-card:hover h3,
+.cert-card:hover h3,
+.beyond-card:hover h3 {
+  color: #ffffff;
+}
