@@ -2402,3 +2402,29 @@ a{ color:inherit; }
   opacity: 1;
   box-shadow: 0 0 25px rgba(120, 120, 255, 0.18);
 }
+/* PROJECT CARDS HOVER */
+.project-card {
+  transition: all 0.28s ease;
+  position: relative;
+}
+
+.project-card:hover {
+  transform: translateY(-8px) scale(1.01);
+  background: rgba(255, 255, 255, 0.06);
+  border-color: rgba(120, 120, 255, 0.35);
+  box-shadow: 0 14px 40px rgba(80, 80, 255, 0.18);
+}
+
+.project-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  opacity: 0;
+  transition: 0.3s;
+}
+
+.project-card:hover::before {
+  opacity: 1;
+  box-shadow: 0 0 25px rgba(120, 120, 255, 0.18);
+}
