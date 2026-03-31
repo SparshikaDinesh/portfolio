@@ -2370,3 +2370,35 @@ a{ color:inherit; }
 .beyond-card:hover h3 {
   color: #ffffff;
 }
+/* BASE CARD STYLE (IMPORTANT) */
+.cert-card.compact,
+.beyond-card {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 16px;
+  transition: all 0.28s ease;
+  position: relative;
+}
+/* HOVER EFFECT */
+.cert-card.compact:hover,
+.beyond-card:hover {
+  transform: translateY(-8px) scale(1.01);
+  background: rgba(255, 255, 255, 0.06);
+  border-color: rgba(120, 120, 255, 0.35);
+  box-shadow: 0 14px 40px rgba(80, 80, 255, 0.18);
+}
+.cert-card.compact::before,
+.beyond-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  opacity: 0;
+  transition: 0.3s;
+}
+
+.cert-card.compact:hover::before,
+.beyond-card:hover::before {
+  opacity: 1;
+  box-shadow: 0 0 25px rgba(120, 120, 255, 0.18);
+}
